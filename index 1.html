@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programe to find the numbers that are divisible by 7 and ending with 7</title>
+    <style>
+        *{
+            background-color: lightblue;
+            text-align:center;
+            padding: auto;
+            margin: auto;
+            font-size: 70px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+     <P>lets play an game</P>
+     <img src="./download.jpeg.jfif">
+      <p>hi my name is jigsaw and i want you to guess the number between 1 to 100 and i will guess it <span>that is divisble by 7 and ending with 7</span> </p><br>
+      <p>so shall we begin!!</p>
+      <input type="button" onfocus="this.style.color='green'" onclick="findNumbers()" value="click me"/>
+    <p id="result"></p>
+
+    <script>
+        function findNumbers() {
+            let result = '';
+            for (let i = 1; i <= 100; i++) {
+                if (i % 7 === 0 || i % 10 === 7) {
+                    result += i + ' ';
+                }
+            }
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
